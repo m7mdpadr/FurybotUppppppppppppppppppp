@@ -70,71 +70,71 @@ client.on('message', message => {
                
 اللغات في البوت : - 
 \`\`\`
-Albanian//alphacodes
-Amharic	//alphacodes
-Arabic//alphacodes
-Armenian	//alphacodes
-Azeerbaijani//alphacodes
-Basque	//alphacodes
-Belarusian	//alphacodes
-Bengali	//alphacodes
-Bosnian	//alphacodes
-Bulgarian	//alphacodes
-Catalan	//alphacodes
-Cebuano	//alphacodes
-Chinese //alphacodes
-Chinese //alphacodes
-Corsican	//alphacodes//alphacodes
-Croatian	//alphacodes
-Czech	//alphacodes
-Danish	//alphacodes
-Dutch	//alphacodes
-English	//alphacodes
-Esperanto	//alphacodes
-Estonian	//alphacodes
-Finnish	//alphacodes
-French	//alphacodes
-Frisian	//alphacodes
-Galician//alphacodes
-Georgian//alphacodes
-German//alphacodes
-Greek//alphacodes
-Gujarati//alphacodes
-Haitian Creole//alphacodes
-Hausa	//alphacodes
-Hawaiian//alphacodes
-Hebrew	//alphacodes
-Hindi	//alphacodes
-Hmong	//alphacodes
-Hungarian	//alphacodes
-Icelandic	//alphacodes
-Igbo	//alphacodes
-Indonesian	//alphacodes
-Irish	//alphacodes
-Italian//alphacodes
-Japanese	//alphacodes
-Javanese	//alphacodes
-Kannada	//alphacodes
-Kazakh	//alphacodes
-Khmer//alphacodes
-Korean	//alphacodes
-Kurdish//alphacodes
-Kyrgyz//alphacodes
-Lao	//alphacodes
-Latin//alphacodes
-Latvian//alphacodes
-Lithuanian	//alphacodes
-Luxembourgish//alphacodes
-Macedonian	//alphacodes
-Malagasy	//alphacodes
-Malay	//alphacodes
-Malayalam	//alphacodes
-Maltese	//alphacodes
-Maori	//alphacodes
-Marathi	//alphacodes
-Mongolian	//alphacodes
-Myanmar //alphacodes
-Nepali	//alphacodes
+Albanian
+Amharic	
+Arabic
+Armenian	
+Azeerbaijani
+Basque	
+Belarusian	
+Bengali	
+Bosnian	
+Bulgarian	
+Catalan	
+Cebuano	
+Chinese 
+Chinese 
+Corsican	
+Croatian	
+Czech	
+Danish	
+Dutch	
+English	
+Esperanto	
+Estonian	
+Finnish	
+French	
+Frisian	
+Galician
+Georgian
+German
+Greek
+Gujarati
+Haitian Creole
+Hausa	
+Hawaiian
+Hebrew	
+Hindi	
+Hmong	
+Hungarian
+Icelandic	
+Igbo	
+Indonesian	
+Irish	
+Italian
+Japanese	
+Javanese	
+Kannada	
+Kazakh	
+Khmer
+Korean	
+Kurdish
+Kyrgyz
+Lao	
+Latin
+Latvian
+Lithuanian	
+Luxembourgish
+Macedonian	
+Malagasy	
+Malay	
+Malayalam	
+Maltese	
+Maori	
+Marathi	
+Mongolian	
+Myanmar 
+Nepali	
 Norwegian	
 Nyanja 
 Pashto	
@@ -340,17 +340,21 @@ client.on('message', function(message) {
           message.delete(5000);//alphacodes
         });//alphacodes
     } else if(message.content.startsWith(prefix + "setavatar")) {//alphacodes
-				        if(message.author.id !== myID) return;//alphacodes
-        client.user.setAvatar(args);//alphacodes
-        message.channel.send(':white_check_mark: Done!').then(msg => {//alphacodes
-                if(!args) return message.reply('اكتب الحالة اللي تريدها.');//alphacodes
-           msg.delete(5000);//alphacodes
-          message.delete(5000);//alphacodes
-        });//alphacodes
-    }//alphacodes
-});//alphacodes
+				        if(message.author.id !== myID) return;
+        client.user.setAvatar(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    }
+});
 
-
+client.on('guildCreate', (guild) => {
+    if(client.guilds.size > 1) {
+        guild.leave();
+    }
+})
 
 
 
