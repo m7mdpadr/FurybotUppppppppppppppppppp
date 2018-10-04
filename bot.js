@@ -122,13 +122,13 @@ client.on('message', message => {
                             
                                                        let status;
      if (getvalueof.presence.status === 'online') {
-         status = 'اون لاين';
+         status = 'Online';
      } else if (getvalueof.presence.status === 'dnd') {
-         status = 'مشغول';
+         status = 'Busy';
      } else if (getvalueof.presence.status === 'idle') {
-         status = 'خارج النطاق';
+         status = 'Dnd';
      } else if (getvalueof.presence.status === 'offline') {
-         status = 'اوف لاين';
+         status = 'Offline';
      }
      
      
