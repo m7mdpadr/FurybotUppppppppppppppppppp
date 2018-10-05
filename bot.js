@@ -1957,7 +1957,7 @@ const superagent = require("superagent");
     .setDescription(`**${message.author.username}** حضن **${message.mentions.users.first().username}**!`)
     .setImage(body.url)
     .setColor("RANDOM")
-    .setFooter("DROWN IS HERE", client.user.displayAvatarURL);
+    .setFooter("Fury Bot", client.user.displayAvatarURL);
 
     message.channel.send(hugEmbed)
 
@@ -3938,7 +3938,7 @@ client.on('message', message => {
     if (message.author.bot) return;
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith(prefix + 'drown')){
+if (message.content.startsWith(prefix + 'fury')){
  if(!message.author.id === '316324088865882142') return;
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
